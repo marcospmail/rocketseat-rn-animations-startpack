@@ -113,18 +113,19 @@ export default class App extends Component {
   );
 
   renderList = () => (
-    <Animated.View style={[styles.container,
-    {
-      transform: [
-        {
-          translateX: this.state.listProgress.interpolate({
-            inputRange: [0, 100],
-            outputRange: [0, width]
-          })
-        }
-      ]
-    }
-    ]}>
+    <Animated.View
+      style={[styles.container,
+      {
+        transform: [
+          {
+            translateX: this.state.listProgress.interpolate({
+              inputRange: [0, 100],
+              outputRange: [0, width]
+            })
+          }
+        ]
+      }
+      ]}>
       <ScrollView
         scrollEventThrottle={16}
         onScroll={
@@ -143,7 +144,7 @@ export default class App extends Component {
           />
         ))}
       </ScrollView>
-    </Animated.View>
+    </Animated.View >
   );
 
   render() {
